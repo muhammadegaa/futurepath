@@ -34,3 +34,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# FuturePath MVP
+
+A goal-setting application built with Next.js and deployed on Vercel.
+
+## Deployment
+
+This project is optimized for deployment on Vercel. To deploy:
+
+1. Push your code to GitHub
+2. Visit [Vercel](https://vercel.com)
+3. Import your repository
+4. Configure your deployment settings:
+   - Framework Preset: Next.js
+   - Build Command: `next build`
+   - Output Directory: `.next`
+   - Install Command: `npm install`
+
+### Environment Variables
+
+Make sure to set up the following environment variables in your Vercel project settings:
+
+```env
+NEXT_PUBLIC_APP_URL=your-production-url
+```
+
+## Development
+# futurepath
