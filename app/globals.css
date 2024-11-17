@@ -3,19 +3,61 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-geist-sans: '__geistSans_c3aa02', '__geistSans_Fallback_c3aa02';
+  --font-geist-mono: '__geistMono_1e4310', '__geistMono_Fallback_1e4310';
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  font-family: var(--font-geist-sans);
+  transition: background-color 0.3s ease;
+}
+
+.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+/* Reset default styles */
+button, input, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Ensure proper box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Add smooth transitions for dark mode */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient {
+    animation: none;
+    background-size: 100% 100%;
+  }
 }
